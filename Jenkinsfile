@@ -2,8 +2,15 @@ pipeline{
 
 
 
+
+
 agent any
 
+environment 
+{
+
+PATH = "${PATH}:${getTerraformPath()}"
+}
 
 stages{
 
@@ -41,3 +48,8 @@ echo "Deploy to production"
 }
 
 }
+
+def getTerraformPath {
+  def tfHome = tool name: 'Terraform', type: 'terraform'
+  return tfHome
+  }
