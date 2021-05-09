@@ -49,7 +49,7 @@ echo "Deploy to production"
 
 }
 
-def getTerraformPath {
+def getTerraformPath() {
   def tfHome = tool name: 'Terraform', type: 'terraform'
   return tfHome
   }
