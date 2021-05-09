@@ -14,7 +14,7 @@ PATH = "${PATH}:${getTerraformPath()}"
 
 stages{
 
-stage('Terraform'){
+stage('terraform init'){
 
 
 
